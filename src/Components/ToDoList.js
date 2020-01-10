@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 import Item from "../Components/Item";
 
 const ToDoList = props => {
@@ -32,9 +33,16 @@ const ToDoList = props => {
 
   return (
     <div>
-      <p>To do</p>
-      <input onChange={onChangeHandler}></input>
-      <button onClick={addToList}>Add</button>
+      <h1 style={{ textAlign: "center" }}>To do</h1>
+      <div style={{ textAlign: "center" }}>
+        <input
+          style={{ height: "35px", padding: "0px" }}
+          onChange={onChangeHandler}
+        ></input>
+        <Button style={{ marginLeft: "16px" }} onClick={addToList}>
+          Add
+        </Button>
+      </div>
       {toDoList}
     </div>
   );
